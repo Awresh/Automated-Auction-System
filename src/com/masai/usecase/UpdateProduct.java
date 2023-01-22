@@ -14,7 +14,7 @@ public class UpdateProduct {
 			System.out.println("Enter the Name of item you want to update");
 			String name = sc.next();
 			
-			System.out.println("Enter the name of Item you want to Update");
+			System.out.println("Enter the new name of Item you want to Update");
 			String name1 = sc.next();
 			
 			System.out.println("Enter the price of item you want to Update");

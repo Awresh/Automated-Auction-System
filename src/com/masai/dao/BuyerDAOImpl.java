@@ -27,7 +27,7 @@ public class BuyerDAOImpl implements BuyerDAO
 			
 			int x= ps.executeUpdate();
 			if(x > 0)
-				message = "Item Buyed Sucessfully !";
+				message = "Sucessfully Registed";
 		} 
 		catch (SQLException e) 
 		{
@@ -116,7 +116,7 @@ public class BuyerDAOImpl implements BuyerDAO
 			int x= ps.executeUpdate();
 			
 			if(x > 0)
-				message = "Buyer Registered Sucessfully !";
+				message = "Thanks for Purchased";
 			
 		} 
 		catch (SQLException e) 

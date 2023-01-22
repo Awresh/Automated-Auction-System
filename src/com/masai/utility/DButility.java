@@ -21,7 +21,7 @@ public class DButility {
 		String url="jdbc:mysql://localhost:3306/aution_database";
 	
 		try {
-			conn= DriverManager.getConnection(url,"root","Nitin@6684");
+			conn= DriverManager.getConnection(url,"root","485629");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

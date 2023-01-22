@@ -19,7 +19,7 @@ import com.masai.usecase.ViewItemBycategory;
 public class Main {
 
 	public static void main(String[] args) {
-		System.out.println(colour.ANSI_blue+"Welcome to Automated Auction System"+colour.ANSI_RESET);
+		System.out.println(colour.ANSI_YELLOW+"Welcome to Automated Auction System"+colour.ANSI_RESET);
 		
 		String admin_Login = "Awresh";
 		String password = "12345";
@@ -30,16 +30,16 @@ public class Main {
 				"	+------------------------------+\n"
 				+ "	|  Option  | 	    Type       |\n"
 				+ "	+----------+-------------------+\n"
-				+ "	|	1  |    Administrator  |\n"
-				+ "	|	2  |    Seller         |\n"
-				+ "	|	3  |    Buyer  	       |\n"
-				+ "	|	4  |    Exit           |\n"
+				+ "	|	1  |  "+colour.ANSI_blue+"  Administrator "+colour.ANSI_RESET+" |\n"
+				+ "	|	2  |  "+colour.ANSI_blue+"  Seller  "+colour.ANSI_RESET+"       |\n"
+				+ "	|	3  | "+colour.ANSI_blue+"   Buyer "+colour.ANSI_RESET+" 	       |\n"
+				+ "	|	4  |  "+colour.ANSI_Red+"  Exit "+colour.ANSI_RESET+"          |\n"
 				+ "	+----------+-------------------+");
 //		System.out.println("2. Seller");
 //		System.out.println("3. Buyer");
 //		System.out.println("4. Exit");
 		
-		System.out.println("Enter Choice");
+		System.out.println(colour.ANSI_YELLOW+"Enter Choice"+colour.ANSI_RESET);
 		int c = sc.nextInt();
 		
 		if(c==1)
@@ -52,19 +52,21 @@ public class Main {
 			
 			if(login.equals(admin_Login) && pass.equals(password)) 
 			{
+				System.out.println(colour.ANSI_YELLOW+"Login Success"+colour.ANSI_RESET);
+				
 				System.out.println(
 						"	+------------------------------+\n"
 						+ "	|  Option  | 	    Type       |\n"
 						+ "	+----------+-------------------+\n"
 						+ "	|	1  |  View Buyer List  |\n"
 						+ "	|	2  |  View Seller List |\n"
-						+ "	|	3  |  Exit  	       |\n"
+						+ "	|	3  |  "+colour.ANSI_Red+" Exit  "+colour.ANSI_RESET+"  	       |\n"
 						+ "	+----------+-------------------+");
 //				System.out.println("1. View Buyer List");
 //				System.out.println("2. View Seller List");
 //				System.out.println("3. Exit");
 				
-				System.out.println("Enter Choice");
+				System.out.println(colour.ANSI_YELLOW+"Enter Choice"+colour.ANSI_RESET);
 				int c3 = sc.nextInt();
 				
 				if(c3==1) 
@@ -93,7 +95,7 @@ public class Main {
 					+ "	|	6  |  View the sold Item history.       |\n"
 					+ "	+----------+------------------------------------+");
 			
-			System.out.println("Enter Choice");
+			System.out.println(colour.ANSI_YELLOW+"Enter Choice"+colour.ANSI_RESET);
 			int c4 = sc.nextInt();
 			
 			if(c4==1)
@@ -109,7 +111,7 @@ public class Main {
 			else if(c4 == 6)
 				new SoldHistory().main(args);
 			else
-				System.out.print("Invalid input Pleas Try again");
+				System.out.print(colour.ANSI_Red+"Invalid input Pleas Try again"+colour.ANSI_RESET);
 		}
 		else if (c==3)
 		{
@@ -130,7 +132,7 @@ public class Main {
 //			System.out.println("3. Select and view all the seller and also their Items category wise.");
 //			System.out.println("4. Selects Items to buy.");
 			
-			System.out.println("Enter Choice");
+			System.out.println(colour.ANSI_YELLOW+"Enter Choice"+colour.ANSI_RESET);
 			int c5 = sc.nextInt();
 			
 			if(c5==1)
@@ -142,7 +144,7 @@ public class Main {
 			else if(c5==4)
 				new BuyItem().main(args);
 			else 
-				System.out.print("Invalid input Pleas Try again");
+				System.out.print(colour.ANSI_Red+"Invalid input Pleas Try again"+colour.ANSI_RESET);
 		}
 		else if( c==4) {
 			System.out.print("Thanks for visit");
