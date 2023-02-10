@@ -4,6 +4,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
 import com.masai.bean.Buyer;
 import com.masai.bean.Seller;
 import com.masai.utility.DButility;
@@ -11,9 +14,9 @@ import com.masai.utility.DButility;
 public class AdminDAOImpl implements AdminDAO
 {
 	@Override
-	public Buyer getBuyer() 
+	public List<Buyer> getBuyer() 
 	{
-		Buyer b = null;
+		 List<Buyer> b = new ArrayList<>();
 		
 		try(Connection conn = DButility.provideConnection()) 
 		{	
@@ -28,9 +31,9 @@ public class AdminDAOImpl implements AdminDAO
 				String email = rs.getString("B_email");
 				String password = rs.getString("B_password");
 				
-				b = new Buyer(id, name, email, password);
-				
-				
+				b.add( new Buyer(id, name, email, password));
+//				System.out.println(b);
+//				
 //				System.out.println("ID is :"+id);
 //				System.out.println("Name is :"+name);
 //				System.out.println("Email is :"+email);
@@ -49,33 +52,33 @@ public class AdminDAOImpl implements AdminDAO
 	}
 
 	@Override
-	public Seller getSeller() 
+	public List<Seller> getSeller() 
 	{
-		Seller s = null;
-		
-	try(Connection conn = DButility.provideConnection())
-	{
-			PreparedStatement ps=  conn.prepareStatement("select * from Seller");
-			
-			ResultSet rs =  ps.executeQuery();
-			
-			while(rs.next()) 
-			{
-				int id= rs.getInt("S_id");
-				String name= rs.getString("S_name");
-				String email = rs.getString("S_email");
-				String password = rs.getString("S_password");
-
-				s = new Seller(id, name, email, password);
-				
-//				System.out.println("=============================");	
-			}
-			
-		}
-		catch(SQLException e)
+		List<Seller> s = new ArrayList<>();
+		try(Connection conn = DButility.provideConnection())
 		{
-			e.printStackTrace();
-		}
+				PreparedStatement ps=  conn.prepareStatement("select * from Seller");
+				
+				ResultSet rs =  ps.executeQuery();
+				
+				while(rs.next()) 
+				{
+					int id= rs.getInt("S_id");
+					String name= rs.getString("S_name");
+					String email = rs.getString("S_email");
+					String password = rs.getString("S_password");
+
+					s.add(new Seller(id, name, email, password));
+					
+//					System.out.println("=============================");	
+				}
+				
+			}
+			catch(SQLException e)
+			{
+				e.printStackTrace();
+			}
+	
 		
 		return s;
 	}

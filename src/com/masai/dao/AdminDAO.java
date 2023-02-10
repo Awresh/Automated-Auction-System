@@ -1,11 +1,13 @@
 package com.masai.dao;
 
+import java.util.List;
+
 import com.masai.bean.Buyer;
 import com.masai.bean.Seller;
 
 public interface AdminDAO
 {
-	public Buyer getBuyer();
+	public List<Buyer> getBuyer();
 	
-	public Seller getSeller();
+	public List<Seller> getSeller();
 }
