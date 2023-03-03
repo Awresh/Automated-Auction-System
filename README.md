@@ -32,6 +32,8 @@ A. Register himself or herself as Buyer.<br>
 B. Search and view Items by category.<br>
 C. Select and view all the buyers and also their Items category wise.<br>
 D. Selects Items to buy.<br></p>
+
+
 ## **ER Diagram**
 
 
