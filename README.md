@@ -32,4 +32,9 @@ A. Register himself or herself as Buyer.<br>
 B. Search and view Items by category.<br>
 C. Select and view all the buyers and also their Items category wise.<br>
 D. Selects Items to buy.<br></p>
+## **ER Diagram**
 
+
+<p align="center">
+  <img src="https://github.com/akashr1122/skillful-shirt-5398/blob/main/FrontEnd/ER_.png?raw=true">
+</p>
