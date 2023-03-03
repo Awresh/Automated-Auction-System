@@ -38,5 +38,5 @@ D. Selects Items to buy.<br></p>
 
 
 <p align="center">
-  <img src="https://github.com/akashr1122/skillful-shirt-5398/blob/main/FrontEnd/ER_.png?raw=true">
+  <img src="https://user-images.githubusercontent.com/107464990/222782038-2e08ddb0-e621-4302-bcd8-73de3a9cbd86.png">
 </p>
